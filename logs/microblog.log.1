@@ -1,0 +1,126 @@
+2025-04-22 11:47:38,963 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-22 17:20:49,389 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-22 17:20:57,349 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-23 16:18:46,312 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-23 16:52:47,689 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-24 10:09:47,150 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
+2025-04-24 10:09:48,147 ERROR: Exception on / [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:09:57,799 ERROR: Exception on / [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:00,144 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:01,527 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:02,019 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:18,093 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:21,740 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
+2025-04-24 10:10:22,604 ERROR: Exception on /explore [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 146, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+TypeError: paginate() takes 1 positional argument but 4 were given
