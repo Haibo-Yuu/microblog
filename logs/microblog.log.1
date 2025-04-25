@@ -1,10 +1,4 @@
-2025-04-22 11:47:38,963 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-22 17:20:49,389 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-22 17:20:57,349 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-23 16:18:46,312 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-23 16:52:47,689 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-24 10:09:47,150 INFO: Microblog startup [in C:\Users\Administrator\montyu\microblog\app\__init__.py:31]
-2025-04-24 10:09:48,147 ERROR: Exception on / [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+2025-04-25 16:22:02,697 ERROR: Exception on /login [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,12 +8,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:09:57,799 ERROR: Exception on / [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Administrator\montyu\microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-04-25 16:22:09,362 ERROR: Exception on /login [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -29,12 +35,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:00,144 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Administrator\montyu\microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-04-25 16:22:10,809 ERROR: Exception on /login [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -44,12 +62,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:01,527 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Administrator\montyu\microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-04-25 16:22:11,396 ERROR: Exception on /login [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -59,12 +89,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:02,019 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Administrator\montyu\microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
+2025-04-25 16:22:11,975 ERROR: Exception on /login [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -74,53 +116,20 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:18,093 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:21,740 ERROR: Exception on /index [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 22, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2025-04-24 10:10:22,604 ERROR: Exception on /explore [GET] [in D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 146, in explore
-    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
+  File "C:\Users\Administrator\montyu\microblog\app\routes.py", line 48, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Administrator\montyu\microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\anaconda\envs\flaskenv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap_wtf.html
