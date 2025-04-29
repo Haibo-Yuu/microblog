@@ -1,7 +1,8 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, g
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm
 from flask_login import current_user, login_user, logout_user, login_required
+from flask_babel import _, get_locale
 from werkzeug.urls import urlsplit
 from datetime import datetime
 from app.models import User, Post
@@ -17,7 +18,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is now live!')
+        flash(_('Your post is now live!'))
         return redirect(url_for('index'))
     page = request.args.get('page', 1, type=int)
     posts = current_user.followed_posts().paginate(
@@ -26,7 +27,7 @@ def index():
         if posts.has_next else None
     prev_url = url_for('index', page=posts.prev_num) \
         if posts.has_prev else None
-    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url,
+    return render_template('index.html', title=_('Home'), form=form, posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
 
 
@@ -89,6 +90,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+    g.locale = str(get_locale())
 
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
